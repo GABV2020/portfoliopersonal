@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="source/favicon.ico" type="image/x-icon" />
+    <title>
+      Guillermo Vado - Desarrollador de software/Ingeniero en Sistemas de las
+      información
+    </title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="home_bg">
+      <header>
+        <img
+          id="logoPersonal"
+          src="source/LogoPersonal.png"
+          alt="Logo Personal"
+        />
+        <nav>
+          <ul>
+            <li>
+              <a href="#home_bg"> <span>Inicio</span></a>
+            </li>
+            <li><a href="#About-me">Acerca</a></li>
+            <li><a href="#Project">Proyectos</a></li>
+            <li><a href="#Contact ">Contacto</a></li>
+          </ul>
+        </nav>
+        <div class="navmenu">
+          <span class="line1"></span>
+          <span class="line2"></span>
+          <span class="line3"></span>
+        </div>
+        <div class="navmenu_ham">
+          <img
+            id="logoPersonal-Ham"
+            src="source/LogoPersonal.png"
+            alt="Logo Personal"
+          />
+          <ul>
+            <li>
+              <a href="#home_bg">Inicio</a>
+            </li>
+            <li><a href="#About-me">Acerca</a></li>
+            <li><a href="#Project">Proyectos</a></li>
+            <li><a href="#Contact ">Contacto</a></li>
+          </ul>
+        </div>
+      </header>
+
+      <section id="Home" class="section">
+        <img src="source/PhotoPersonal.jpg" alt="Photo Personal" />
+        <h1 id="home-title">Guillermo Antonio Baltodano Vado</h1>
+        <p id="home-role">
+          Desarrollador de software & Ingeniero en Sistemas de la Información
+        </p>
+      </section>
+    </div>
+    <section id="About-me" class="section">
+      <h1>Acerca</h1>
+      <div id="about-me_info">
+        <div id="imageAbout-Me">
+          <img src="source/Img_About-me.svg" alt="Image About Me" />
+        </div>
+        <div id="about-meInfoP">
+          <p>
+            Estoy en último año de la carrera en Ingeniería en Sistemas de la
+            información, me encantan programar, y ayudar a las otras personas a
+            través de las tecnologías. Tengo experiencia trabajando en proyectos
+            web y móvil. Si quieres saber más de mí, acá te dejo:
+          </p>
+          <a
+            href="source/Guillermo Antonio Baltodano Vado - CV.pdf"
+            target="_blank"
+            ><button>Descargar CV</button></a
+          >
+        </div>
+      </div>
+      <div id="technologies">
+        <h1>Tecnologías</h1>
+        <div class="wrapper">
+          <i id="left" class="fa-solid fa-arrow-left"></i>
+          <div class="carousel">
+            <img
+              draggable="false"
+              src="source/technologies/html-5.png"
+              alt="HTML"
+            />
+            <img
+              draggable="false"
+              src="source/technologies/css-3.png"
+              alt="CSS"
+            />
+            <img draggable="false" src="source/technologies/JS.png" alt="JS" />
+            <img
+              draggable="false"
+              src="source/technologies/java.png"
+              alt="JAVA"
+            />
+          </div>
+          <i id="right" class="fa-solid fa-arrow-right"></i>
+        </div>
+      </div>
+    </section>
+
+    <section id="Project" class="section">
+      <h1 id="project-title">Proyectos</h1>
+      <div class="wrapper">
+        <div class="container">
+          <div class="card">
+            <img
+              src="source/proyects/ArboretoCarmeloPalma.JPG"
+              alt="Arboreto Carmelo Palma"
+            />
+            <div class="proyect-info">
+              <h1>Arboreto Carmelo Palmas</h1>
+              <p>
+                Es una aplicación web para gestionar información y
+                geolocalización de árboles, desarrollada con HTML, CSS, JS,
+                Bootstrap, JSP y PostgreSQL.
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="source/proyects/Timecraft.jpg" alt="Timecraft" />
+            <div class="proyect-info">
+              <h1>Timecraft</h1>
+              <p>
+                Es una aplicación móvil para gestionar tareas, notas y recordatorios, desarrollada con Java y SQLite.
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="source/proyects/CatAbra.JPG" alt="CatAbra" />
+            <div class="proyect-info">
+              <h1>CatAbra</h1>
+              <p>
+                Es una aplicación móvil para mostrar fotos e información de gatos, desarrollada con Kotlin y SQLite.
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="source/proyects/TreeAbra.JPG" alt="TreeAbra" />
+            <div class="proyect-info">
+              <h1>TreeAbra</h1>
+              <p>Es una aplicación móvil para mostrar fotos e información de árboles del arboreto, desarrollada con Kotlin y SQLite.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="Contact" class="section">
+      <div class="wrapper">
+        <h1>Contacto</h1>
+        <form action="https://formspree.io/f/xayzowze" method="post"  id="form-contact">
+          <!-- <label for="name" class="form-label">Nombres:</label>
+          <input type="text" id="name" name="name" class="form-input" autocomplete="off"> -->
+          <label for="email" class="form-label">Correo:</label>
+          <input type="text" id="email" name="email"  class="form-input" autocomplete="off">
+          <!-- <label for="subject" class="form-label">Asunto:</label>
+          <input type="text" id="subject" name="subject"  class="form-input" autocomplete="off"> -->
+          <label for="message" class="form-label">Mensaje:</label>
+          <textarea id="message" name="message" id="message" cols="15" rows="5"  class="form-textarea"></textarea>
+          <input type="submit" value="Enviar" id="btn-submit">
+          </form>
+        </div>
+    </section>
+
+    <footer>
+      <div class="social-media">
+        <ul>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/guillermo-antonio-baltodano-vado-7aa66723a/"
+              target="_blank"
+              ><i class="fa-brands fa-linkedin fa-2xl"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://github.com/GABV2020/" target="_blank"
+              ><i class="fa-brands fa-github fa-2xl"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+      <div class="copyright">
+        <p>Copyright ® 2023 Guillermo Vado</p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="scripts.js"></script>
+    <script
+      src="https://kit.fontawesome.com/12d21ebefe.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

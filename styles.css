@@ -1,0 +1,630 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.home_bg {
+  background-image: url("source/bg_photo.jpg");
+  background-size: cover;
+  box-shadow: inset 0 0 600px 70px rgba(0, 0, 0, 1);
+}
+
+.section {
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 2em;
+  border: none;
+  font-family: sans-serif;
+}
+
+header #logoPersonal {
+  height: 20px;
+  margin-right: auto;
+  margin-left: 10%;
+  cursor: pointer;
+  position: relative;
+}
+
+header nav {
+  margin-right: 7%;
+  font-size: 20px;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+header nav ul span {
+  color: #6fdfdf;
+}
+
+header nav ul li a {
+  color: white;
+  margin: 1em;
+  text-decoration: none;
+  position: relative;
+}
+
+header nav ul li a::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  left: 0;
+  bottom: -6px;
+  height: 3px;
+  border-radius: 40px;
+  background-color: #6fdfdf;
+  transform: scaleX(0);
+  transition: ease 0.3s;
+}
+
+header nav ul li a:hover:after {
+  transform: scaleX(1);
+}
+
+header nav ul li a:hover {
+  color: rgba(111, 223, 223, 0.6);
+}
+
+#Home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  min-height: 90vh;
+}
+
+#Home img {
+  height: 290px;
+  border-radius: 60%;
+}
+
+#Home #home-title {
+  font-size: 3em;
+  margin-top: 0.5em;
+  margin-bottom: 0.1em;
+  color: #6fdfdf;
+  overflow: hidden;
+}
+
+#Home #home-role {
+  display: inline-flex;
+  font-size: 1.4em;
+  margin-top: 0.2em;
+  margin-bottom: 1em;
+  white-space: nowrap;
+  border-right: 5px solid;
+  width: 55ch;
+  overflow: hidden;
+  animation: typing 5s steps(55) infinite,
+    blink 0.5s infinite step-end alternate;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+#About-me {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: #18033d;
+  color: white;
+  padding: 2em;
+  flex-wrap: wrap;
+}
+
+#about-me_info {
+  max-width: 800px;
+  display: flex;
+  justify-content: row;
+}
+
+#About-me #about-me_info #imageAbout-Me img {
+  height: 200px;
+}
+
+#About-me #about-me_info #imageAbout-Me {
+  margin-right: 5%;
+  margin-top: auto;
+}
+
+#About-me h1 {
+  width: 5em;
+  color: white;
+  font-size: 35px;
+  position: relative;
+  margin-bottom: 0.7em;
+  margin-top: 0;
+  text-align: center;
+}
+
+#About-me h1::after {
+  margin-top: 0.2em;
+  display: block;
+  position: absolute;
+  content: "";
+  height: 3px;
+  width: 40%;
+  background-color: #6fdfdf;
+  left: 30%;
+}
+
+#about-me_info #about-meInfoP p {
+  text-align: justify;
+  width: 100%;
+}
+
+#about-me_info #about-meInfoP button {
+  border: none;
+  padding: 12px 10px;
+  border-radius: 40px;
+  background-color: #6fdfdf;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+#about-me_info #about-meInfoP button:hover {
+  background-color: rgba(111, 223, 223, 0.8);
+}
+
+#About-me #technologies h1 {
+  text-align: center;
+  font-size: 35px;
+  margin-top: 2em;
+  margin-bottom: 1.5em;
+  position: relative;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#About-me #technologies h1::after {
+  margin-top: 0.2em;
+  top: 100%;
+  left: 29%;
+  display: block;
+  position: absolute;
+  content: "";
+  height: 3px;
+  width: 40%;
+  background-color: #6fdfdf;
+}
+
+#About-me #technologies {
+  padding: 20px;
+  position: relative;
+}
+
+#About-me #technologies i {
+  position: absolute;
+  top: 65%;
+  transform: translateY(-50%);
+  color: #6fdfdf;
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  background-color: black;
+  font-size: 1.2em;
+  line-height: 45px;
+  text-align: center;
+  cursor: pointer;
+}
+
+#About-me #technologies i:hover{
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+#About-me #technologies i:first-child {
+  left: -25px;
+}
+
+#About-me #technologies i:last-child {
+  right: -25px;
+}
+
+#About-me #technologies .carousel {
+  white-space: nowrap;
+  font-size: 0px;
+  cursor: pointer;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+#About-me #technologies .carousel img {
+  height: 150px;
+  object-fit: contain;
+  margin: 0 2px;
+  padding: 10px;
+  width: calc(100% / 4);
+  border-radius: 30px;
+  border: 1px solid black;
+  box-shadow: 2px 5px black;
+  background-color: rgba(111, 223, 223, 0.3);
+  box-shadow: 4px 5px black;
+}
+
+#About-me #technologies .carousel img:first-child {
+  margin-left: 0px;
+}
+
+#Project {
+  background-color: #12022e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+#Project #project-title {
+  color: white;
+  font-size: 30px;
+  position: relative;
+}
+
+#Project #project-title::after {
+  margin-top: 0.2em;
+  top: 100%;
+  left: 29%;
+  display: block;
+  position: absolute;
+  content: "";
+  height: 3.5px;
+  width: 40%;
+  background-color: #6fdfdf;
+}
+
+#Project .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+#Project .card {
+  max-width: 400px;
+  max-height: 240px;
+  margin: 5px;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+#Project .card img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+#Project .card .proyect-info {
+  color: white;
+  padding: 10px;
+  background-color: rgba(128, 128, 128, 0.7);
+  position: absolute;
+  width: 100%;
+  top: 80%;
+  inset-block-end: 0;
+}
+
+#Project .card .proyect-info h1 {
+  margin: 0;
+}
+
+#Project .card .proyect-info p {
+  text-align: justify;
+  margin-right: 20px;
+}
+
+#Project .card .proyect-info:hover {
+  top: 50%;
+}
+
+#Contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #0c011e;
+}
+
+#Contact .wrapper {
+  border: none;
+  background-color: #18033d;
+  border-radius: 20px;
+  padding: 17px;
+  color: white;
+  box-shadow: 2px 5px black;
+  width: 500px;
+}
+
+#Contact .wrapper h1 {
+  text-align: center;
+  font-size: 35px;
+}
+
+#Contact #form-contact {
+  max-width: 100%;
+}
+
+#Contact #form-contact .form-label {
+  display: block;
+  margin: 7px 0;
+}
+
+#Contact #form-contact .form-input {
+  width: 100%;
+  border-radius: 4px;
+  padding: 4px;
+}
+
+#Contact #form-contact .form-textarea {
+  width: 100%;
+  border-radius: 4px;
+  resize: none;
+}
+
+#Contact #form-contact #btn-submit {
+  width: 100%;
+  margin: 20px 0;
+  border-radius: 7px;
+  padding: 6px;
+  background-color: #6fdfdf;
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+  border: none;
+}
+
+#Contact #form-contact #btn-submit:hover {
+  background-color: rgba(111, 223, 223, 0.9);
+}
+
+footer .social-media {
+  background-color: #01000f;
+  padding: 1em;
+}
+
+footer .social-media ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+footer .social-media ul a {
+  text-decoration: none;
+}
+
+footer .social-media ul li {
+  display: inline-block;
+  margin-right: 0.5em;
+  cursor: pointer;
+}
+
+footer .social-media ul li i {
+  color: white;
+}
+
+footer .copyright {
+  padding: 0.1em;
+  background-color: #020009;
+}
+
+footer .copyright p {
+  text-align: center;
+  font-size: 12px;
+  color: white;
+}
+
+/* Menu hamburguess */
+.navmenu {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  position: relative;
+  display: none;
+}
+
+.navmenu span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin-top: 6px;
+  transform-origin: 0px;
+  background-color: #6fdfdf;
+  transition: all 600ms;
+}
+
+.activeline1 {
+  transform: rotate(45deg) translate(-2px, 0.5px);
+}
+
+.activeline2 {
+  margin-left: -30px;
+  opacity: 0;
+}
+
+.activeline3 {
+  transform: rotate(-45deg) translate(-1px, 0px);
+}
+
+.navmenu_ham {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: absolute;
+  opacity: 0;
+  width: 40%;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  padding: 20px;
+  background-color: rgba(2, 1, 21, 0.7);
+  transition: all 0.5s ease;
+}
+
+.navmenu_ham #logoPersonal-Ham {
+  height: 20px;
+  margin-top: 1em;
+}
+
+.navmenu_ham ul {
+  padding: 0;
+  list-style: none;
+}
+
+.navmenu_ham ul li {
+  margin-top: 1.2em;
+  font-size: 18px;
+}
+
+.navmenu_ham ul a {
+  text-decoration: none;
+  color: white;
+}
+
+.active-navmenu_ham {
+  opacity: 1;
+}
+
+.desactive-imgheader {
+  display: none;
+}
+
+/* Mobiles & Tablets */
+@media screen and (max-width: 800px) {
+  header img {
+    margin-left: 0;
+  }
+
+  #Home img {
+    height: 250px;
+    border-radius: 60%;
+  }
+
+  #Home #home-title {
+    text-align: center;
+    font-size: 25px;
+  }
+  #Home #home-role {
+    text-align: center;
+    font-size: 25px;
+  }
+
+  #About-me h1 {
+    font-size: 1.8em;
+  }
+
+  #about-me_info {
+    flex-wrap: wrap;
+  }
+
+  #About-me #about-me_info #imageAbout-Me {
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  nav {
+    display: none;
+  }
+
+  .navmenu {
+    display: block;
+  }
+
+  header #logoPersonal {
+    margin-left: 5%;
+  }
+
+  #Home,
+  #About-me {
+    min-height: fit-content;
+  }
+
+  #Home #home-role {
+    animation: none;
+    border-right: none;
+    white-space: normal;
+    width: auto;
+  }
+
+  #About-me #technologies .carousel img {
+    width: calc(100% / 3);
+  }
+
+  #Contact .wrapper {
+    width: 70%;
+  }
+
+  #about-me_info #about-meInfoP{
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  #About-me #technologies .carousel img {
+    width: 40%;
+    height: 150px;
+  }
+
+  #About-me #about-me_info #imageAbout-Me img{
+    height: 150px;
+  }
+
+  #About-me #technologies i {
+    line-height: 25px;
+    height: 25px;
+    width: 25px;
+    font-size: 15px;
+  }
+
+  #About-me #technologies i:first-child {
+    left: -15px;
+  }
+  
+  #About-me #technologies i:last-child {
+    right: -15px;
+  }
+
+  #Home #home-title {
+    text-align: center;
+    font-size: 20px;
+  }
+  #Home #home-role {
+    text-align: center;
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .navmenu_ham {
+    transition: 0;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
